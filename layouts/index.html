@@ -1,0 +1,16 @@
+
+{{define "main"}}
+    {{ $blogPosts := (.Site.GetPage "/blog").Pages}}
+    {{partial "header" .}}
+    <div>
+        <h1>{{.Title}}</h1>
+        <h2>Blog</h2>
+        {{ range $blogPosts.ByDate }}
+            <a href="{{.RelPermalink}}" class="href">
+                <h3>{{.Title}}</h3>
+                <p>{{.Summary}}</p>
+            </a>
+
+        {{ end }}
+    </div>
+{{end}}

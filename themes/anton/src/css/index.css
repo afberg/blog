@@ -1,0 +1,8 @@
+* {
+    color: red;
+    background-color: blue;
+}
+
+::placeholder {
+    color: green;
+}
