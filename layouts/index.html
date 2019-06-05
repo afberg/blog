@@ -12,6 +12,7 @@
     
     {{partial "header" .}}
     <main>
+        <animated-text></animated-text>
         <h1>{{.Title}}</h1>
         <h2>Blog</h2>
         {{ $blogPosts := (.Site.GetPage "/blog").Pages}}

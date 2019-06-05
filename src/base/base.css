@@ -1,13 +1,19 @@
-*{
+* {
     line-height: 150%;
+    font-size: 18px;
+}
+html {
+    --textColor: #1b1b1b;
 }
 main {
     width: 100%;
-    max-width: 544px;
+    max-width: 700px;
     margin: 0 auto;
-    color: #1b1b1b;
+    color: var(--textColor);
 }
 nav {
+    max-width: 700px;
+    margin: 0 auto;
     display: flex;
     padding: 10px;
     font-size: 18px;
@@ -15,12 +21,12 @@ nav {
     a:not(.active) {
         border-bottom: none;
     }
-    > * {
+    > *:not(:first-child) {
         margin: 0 10px;
     }
 
 }
-a{
+a {
     color: #1b1b1b;
     text-decoration: none;
     border-bottom: 1px solid rgba(27,27,27,0.5);

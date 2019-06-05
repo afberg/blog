@@ -1,16 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog | {{.Title}}</title>
-</head>
-<body>
-    {{partial "header" .}}
-    <main>
+
+
+{{define "scripts"}}
+{{ $script := resources.Get "./post.js" | fingerprint}}
+<script type="text/javascript" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+{{end}}
+
+{{define "styles"}}
+{{ $style := resources.Get "./post.css" | fingerprint}}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{end}}
+
+{{define "main"}}
+
+{{partial "header" .}}
+<main>
+    <article>
+        <h1>{{.Title}}</h1>
         {{.Content}}
-    </main>
-    
-</body>
-</html>
+    </article>
+</main>
+{{end}}

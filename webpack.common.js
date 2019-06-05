@@ -7,16 +7,21 @@ module.exports = env => {
     console.log('NODE_ENV: ', env.NODE_ENV);
     console.log('Production: ',isProd);
     return {
-        mode: env.production ? "production": "development",
-        devtool: "cheap-module-eval-source-map",
+        mode: isProd ? "production": "development",
+        devtool: isProd ? "" :"inline-source-map",
         watch: !isProd, 
         entry: {
             home: './src/home',
-            base: './src/base'
+            base: './src/base',
+            post: './src/post',
+
         },
         output: {
             filename: '[name].js',
             path: path.resolve(__dirname, './assets/')
+        },
+        resolve: {
+            extensions: [".ts", ".js"]
         },
         module: {
             rules: [{
@@ -38,7 +43,26 @@ module.exports = env => {
                         loader: 'postcss-loader'
                     }
                 ]
-            }]
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
+            {
+                test: /\.ts$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'ts-loader'
+                }
+            }
+        ],
+            
         },
         plugins: [
             new CleanWebpackPlugin(),

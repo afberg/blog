@@ -1,0 +1,13 @@
+h1 + p:first-letter, h2 + p:first-letter, h3 + p:first-letter {
+        color: #903;
+        float: left;
+        font-family: Georgia;
+        font-size: 75px;
+        line-height: 75px;
+        padding-top: -4px;
+        padding-right: 8px;
+        padding-left: 3px;
+    }
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvcG9zdC9wb3N0LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiJwb3N0LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImgxICsgcDpmaXJzdC1sZXR0ZXIsIGgyICsgcDpmaXJzdC1sZXR0ZXIsIGgzICsgcDpmaXJzdC1sZXR0ZXIge1xyXG4gICAgICAgIGNvbG9yOiAjOTAzO1xyXG4gICAgICAgIGZsb2F0OiBsZWZ0O1xyXG4gICAgICAgIGZvbnQtZmFtaWx5OiBHZW9yZ2lhO1xyXG4gICAgICAgIGZvbnQtc2l6ZTogNzVweDtcclxuICAgICAgICBsaW5lLWhlaWdodDogNzVweDtcclxuICAgICAgICBwYWRkaW5nLXRvcDogLTRweDtcclxuICAgICAgICBwYWRkaW5nLXJpZ2h0OiA4cHg7XHJcbiAgICAgICAgcGFkZGluZy1sZWZ0OiAzcHg7XHJcbiAgICB9XHJcbiJdLCJzb3VyY2VSb290IjoiIn0=*/
