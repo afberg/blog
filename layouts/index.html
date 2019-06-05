@@ -1,3 +1,12 @@
+{{define "scripts"}}
+    {{ $script := resources.Get "./home.js" | fingerprint}}
+    <script type="text/javascript" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+{{end}}
+
+{{define "styles"}}
+    {{ $style := resources.Get "./home.css" | fingerprint}}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{end}}
 
 {{define "main"}}
     {{ $blogPosts := (.Site.GetPage "/blog").Pages}}

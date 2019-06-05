@@ -1,17 +1,22 @@
 const path = require("path");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = env => {
+    const isProd = env.production === "true";
     console.log('NODE_ENV: ', env.NODE_ENV);
-    console.log('Production: ', env.production);
+    console.log('Production: ',isProd);
+    console.log('Watch: ', !isProd);
     return {
         mode: env.production ? "production": "development",
+        devtool: "cheap-module-eval-source-map",
+        watch: !isProd, 
         entry: {
             home: './src/home'
         },
         output: {
-            filename: '[name].[chunkhash].js',
-            path: path.resolve(__dirname, './dist/')
+            filename: '[name].js',
+            path: path.resolve(__dirname, './assets/')
         },
         module: {
             rules: [{
@@ -38,8 +43,8 @@ module.exports = env => {
         plugins: [
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({
-                filename: '[name].[contenthash].css'
-            }),
+                filename: '[name].css'
+            })
         ],
     }
 };
