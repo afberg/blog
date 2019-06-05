@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config webpack.common.js"
+    "dev": "webpack --env.NODE_ENV=local --env.production=false --config webpack.common.js --"
   },
   "author": "Anton Forsberg",
   "license": "ISC",
@@ -13,10 +13,15 @@
     "webpack": "^4.32.2"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.7.0",
     "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1",
     "webpack-cli": "^3.3.2"
-  }
+  },
+  "browserslist": [
+    "> 2%",
+    "not IE <= 11"
+  ]
 }
