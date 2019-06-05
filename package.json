@@ -9,10 +9,12 @@
   "author": "Anton Forsberg",
   "license": "ISC",
   "dependencies": {
-    "autoprefixer": "^9.5.1",
-    "webpack": "^4.32.2"
+    "normalize-css": "^2.3.1"
   },
   "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "webpack": "^4.32.2",
+    "postcss-nested": "^4.1.2",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",

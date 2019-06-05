@@ -9,17 +9,21 @@
 {{end}}
 
 {{define "main"}}
-    {{ $blogPosts := (.Site.GetPage "/blog").Pages}}
+    
     {{partial "header" .}}
-    <div>
+    <main>
         <h1>{{.Title}}</h1>
         <h2>Blog</h2>
+        {{ $blogPosts := (.Site.GetPage "/blog").Pages}}
         {{ range $blogPosts.ByDate }}
-            <a href="{{.RelPermalink}}" class="href">
+            <article>
                 <h3>{{.Title}}</h3>
                 <p>{{.Summary}}</p>
-            </a>
-
+                <a  href="{{.RelPermalink}}"
+                    class="href"
+                    title="{{.Title}}"
+                    alt="Click to read more about {{.Title}}">Read more...</a>
+            </article>
         {{ end }}
-    </div>
+    </main>
 {{end}}

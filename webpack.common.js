@@ -6,13 +6,13 @@ module.exports = env => {
     const isProd = env.production === "true";
     console.log('NODE_ENV: ', env.NODE_ENV);
     console.log('Production: ',isProd);
-    console.log('Watch: ', !isProd);
     return {
         mode: env.production ? "production": "development",
         devtool: "cheap-module-eval-source-map",
         watch: !isProd, 
         entry: {
-            home: './src/home'
+            home: './src/home',
+            base: './src/base'
         },
         output: {
             filename: '[name].js',

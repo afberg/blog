@@ -1,0 +1,30 @@
+*{
+    line-height: 150%;
+}
+main {
+    width: 100%;
+    max-width: 544px;
+    margin: 0 auto;
+    color: #1b1b1b;
+}
+nav {
+    display: flex;
+    padding: 10px;
+    font-size: 18px;
+
+}
+nav a:not(.active) {
+        border-bottom: none;
+    }
+nav > * {
+        margin: 0 10px;
+    }
+a{
+    color: #1b1b1b;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(27,27,27,0.5);
+    transition: border-bottom-color 0.2s ease-in-out;
+}
+a:hover {
+        border-bottom-color: rgba(27,27,27, 1);
+    }
