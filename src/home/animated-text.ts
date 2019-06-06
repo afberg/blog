@@ -16,9 +16,31 @@ export class AnimatedText extends LitElement {
         }
         span {
             font-family: monospace;
-            display: block;
-            color: var(--textColor)
-        }`;
+            display: flex;
+            color: var(--textColor);
+        }
+        .char {
+            animation: typeIn 0.5s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        .transform{
+            max-width: 0ch;
+            overflow: hidden;
+            opacity: 0;
+            background-color: var(--textColor);
+            color: white;
+        }
+
+        @keyframes typeIn {
+            to {
+                opacity: 1;
+                color: var(--textColor);
+                background-color: transparent;
+                max-width: 1ch;
+            }
+        }
+        `;
+        
     }
 
     // Render element DOM by returning a `lit-html` template.
@@ -26,7 +48,12 @@ export class AnimatedText extends LitElement {
     return html`
     <div class="container">
         ${this.text.split('').map( (char, i) => html`
-            <span class="char ${ i > 0 && i < this.text.length - 1 ? 'transform' : ''}">
+        ${this.visible < this.text.length - 1 && i === this.text.length - 1 ? html`
+            <span class="number">${this.text.length - 2 - this.visible}</span>` : ''
+        }
+            <span class="char 
+                ${ i > this.visible && i < this.text.length - 1 ? 'transform' : ''}"
+                style="animation-delay: ${i*0.5+Math.random() + 's'};">
                 ${char}
             </span>
         `)}
