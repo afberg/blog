@@ -4,7 +4,9 @@
 }
 html {
     --textColor: #1b1b1b;
+    --textColorRBGA: rgba(#1b1b1b, 1);
     --accentColor: #903;
+    background-color: #fafafa;
 }
 main {
     width: 100%;

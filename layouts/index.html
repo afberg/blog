@@ -12,8 +12,15 @@
     
     {{partial "header" .}}
     <main>
-        <h1>Hi, I'm <animated-text></animated-text>!</h1>
-        <h2>Blog</h2>
+        <section class="intro">
+            <h2>Hi, I'm <animated-text></animated-text></h2>
+            <p>
+                I'm a software engineer from Sweden currently living in Amsterdam. I'm quite opinionated when it comes to development and this blog is where I share those opinions. If you don't like what I'm saying, feel free to <a href="https://twitter.com/AOForsberg" title="Anton Forsberg on Twitter">scream at me on Twitter</a>.
+                
+            </p>
+        </section>
+     
+        <h1>Blog</h1>
         {{ $blogPosts := (.Site.GetPage "/blog").Pages}}
         {{ range $blogPosts.ByDate }}
             <article>

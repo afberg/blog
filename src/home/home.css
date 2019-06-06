@@ -1,5 +1,17 @@
 animated-text {
-    --fontSize: 2em;
-    
-    padding-bottom: 6px;
+    --fontSize: 24px;
+    padding-bottom: 1px;
+    transition: border-bottom 0.2s ease-out;
+    border-bottom: 1px solid var(--textColorRBGA);
+}
+h2 {
+    font-family: monospace;
+    font-size: 24px;
+}
+section.intro {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #c0c0c0;
+    padding: 10px;
 }

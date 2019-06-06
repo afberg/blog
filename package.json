@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --env.NODE_ENV=local --env.production=false --config webpack.common.js"
+    "dev": "webpack --env.NODE_ENV=local --env.production=false --config webpack.common.js",
+    "build": "webpack --env.production=true --config webpack.common.js"
   },
   "author": "Anton Forsberg",
   "license": "ISC",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "lit-element": "^2.1.0",
-    "normalize-css": "^2.3.1"
+    "normalize-css": "^2.3.1",
+    "postcss-hexrgba": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
