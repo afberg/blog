@@ -15,3 +15,14 @@ section.intro {
     border-bottom: 2px solid #c0c0c0;
     padding: 10px;
 }
+h4, h3 {
+    display: inline-block;
+    margin: 0;
+}
+h4 {
+    font-weight: lighter;
+    color: #464646;
+}
+article {
+    margin-bottom: 10px;
+}

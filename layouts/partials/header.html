@@ -1,6 +1,7 @@
 <header>
     <nav>
+        {{ $about := .Site.GetPage "/about"}}
         <a href="/" class="active">Blog</a>
-        <a href="/">Something else</a>
+        <a href="{{ $about.Permalink }}">{{$about.Title}}</a>
     </nav>
 </header>

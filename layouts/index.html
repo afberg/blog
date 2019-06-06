@@ -15,16 +15,17 @@
         <section class="intro">
             <h2>Hi, I'm <animated-text></animated-text></h2>
             <p>
-                I'm a software engineer from Sweden currently living in Amsterdam. I'm quite opinionated when it comes to development and this blog is where I share those opinions. If you don't like what I'm saying, feel free to <a href="https://twitter.com/AOForsberg" title="Anton Forsberg on Twitter">scream at me on Twitter</a>.
+                I'm a software engineer from Sweden currently living in Amsterdam. This blog is where I aim to share my opinions and thoughts on software development. If you don't like what I'm saying, feel free to <a href="https://twitter.com/AOForsberg" title="Anton Forsberg on Twitter">scream at me on Twitter</a>.
                 
             </p>
         </section>
      
         <h1>Blog</h1>
         {{ $blogPosts := (.Site.GetPage "/blog").Pages}}
-        {{ range $blogPosts.ByDate }}
+        {{ range $blogPosts.ByDate.Reverse }}
             <article>
                 <h3>{{.Title}}</h3>
+                <h4> — {{.PublishDate.Format "2006-01-02"}}</h4>
                 <p>{{.Summary}}</p>
                 <a  href="{{.RelPermalink}}"
                     class="href"
