@@ -3,7 +3,7 @@ import {LitElement, html, css, customElement, property} from 'lit-element';
 @customElement('animated-text')
 export class AnimatedText extends LitElement {
 
-    @property({ type: String}) text = 'Anton_Forsberg';
+    @property({ type: String}) text = 'anton_forsberg';
     @property({ type: Number}) visible = 0;
 
     constructor() {
