@@ -4,6 +4,7 @@
 }
 html {
     --textColor: #1b1b1b;
+    --accentColor: #903;
 }
 main {
     width: 100%;

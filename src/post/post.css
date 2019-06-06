@@ -1,6 +1,6 @@
 h1,h2,h3 {
     + p:first-letter {
-        color: #903;
+        color: var(--accentColor);
         float: left;
         font-family: Georgia;
         font-size: 75px;
