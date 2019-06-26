@@ -7,7 +7,7 @@ draft: true
 Internet explorer, the browser that you love to hate. It has been around for ages, and is showing no signs of dissapearing any time soon. Microsoft is commited to supporting it [ref], websites commited to supporting it [ref] and usage hasn't dropped significantly in the last few years. So what's the deal? What is so bad about internet explorer and what can we do about it? To answer these questions we fist need to dig deeper into how we ended up here.
 
 ## It all started with noble intentions, kind of
-Like with any technological decision, vendor lock-in and disobeying[change] established or open standards will always come back to bite you. This was the case with ActiveX[emdash]the whole reason we are in this mess to begin with.
+Like with any technological decision, vendor lock-in and straying far from [change] established or open standards will always come back to bite you. This was the case with ActiveX[emdash]the whole reason we are in this mess to begin with.
 
 See ActiveX was an initiative from Microsoft in a time where the open standards of the web weren't developing quickly enough, generally known by developers as the web's "dark ages". Giving Microsoft the benefit of the doubt I'd say their intentions were noble. They wanted to push the boundaries of the web and make it easier for developers to create usable interfaces. Since they were controlling a massive share of the web browser market[ref] [replace 1] at the time, all the needed was to create and implement a language that worked in their own browser. This language was ActiveX.
 
@@ -19,7 +19,11 @@ Microsoft didn't keep their browser monopoly forever. The open web standards wer
 
 What about all of those companies I mentioned earlier? They had invested thousands or even millions of dollars building products using a technology that was no longer supported by modern browsers. What were they to do? Well upgrading their browsers wasn't an option as that would meean they would have to scrap their products. Microsoft had touted ActiveX as a way to build a newer, better web and it no longer was. Meanwhile they were loosing the browser wars and were developing a new browser, Edge, but couldn't scrap their old one. I'm sure you can imagine what happened next. IE11 kept coming bundled with new versions of windows, and companies were given a way to keep using their widely unsupported products.
 
+And so, there are still plenty of products going around built in ActiveX and just as many companies enforcing it on their users. I had this experience myself only a year ago while working on a project for a customer. I was required to have a whole separate laptop only to access one single system used for bug reports, it's crazy.
 
+## All is not lost
+
+So will IE be around forever? Probably not. But it's already [years] years old and will probably stick around for a while longer[em]especially in larger organizations that are facing difficutlies migrating from their current software (and who are not taking the opinions of their IT personell seriously enough).
 
 
 For frontend developers the hatred runs so deep for IE that it's become an internal joke in the community.
